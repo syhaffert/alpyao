@@ -17,6 +17,9 @@ sfc_module = Extension(
 setup(
     name='alpyao',
     version='0.1',
-    description='Python package with superfastcode2 C++ extension (PyBind11)',
+    description='Alpyao is a pybind11 wrapper for the Alpao SDK3.',
     ext_modules=[sfc_module],
+	author='Sebastiaan Y. Haffert',
+	author_email='shaffert@email.arizona.edu',
+	url='https://github.com/syhaffert/alpyao',
 )
