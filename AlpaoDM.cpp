@@ -66,3 +66,7 @@ std::string AlpaoDM::GetVoltages(){
 		message += std::to_string(actuator_voltages[i]) + ", ";
 	return message;
 }
+
+acs::UInt AlpaoDM::getNumberOfActuators(){
+	return number_of_actuators;
+}

@@ -23,4 +23,5 @@ class AlpaoDM{
 		void Send( py::array_t<double> );
 		void Reset();
 		std::string GetVoltages();
+		acs::UInt getNumberOfActuators();
 };

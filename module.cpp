@@ -16,5 +16,6 @@ PYBIND11_MODULE(alpyao, m) {
 		.def(py::init<std::string &>())
 		.def("Send", &AlpaoDM::Send)
 		.def("Reset", &AlpaoDM::Reset)
-		.def("GetVoltages", &AlpaoDM::GetVoltages);
+		.def("GetVoltages", &AlpaoDM::GetVoltages)
+		.def("NumAct", &AlpaoDM::getNumberOfActuators);
 }
