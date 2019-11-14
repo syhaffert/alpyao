@@ -1,11 +1,11 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
+namespace py = pybind11;
+
 #include <string>
 #include <iostream>
 #include <sstream>
 #include "FakeAlpao.h"
-
-namespace py = pybind11;
 
 FakeAlpao::FakeAlpao(std::string serialNumber){
 	serial_number = serialNumber.c_str();
@@ -41,12 +41,4 @@ std::string FakeAlpao::GetVoltages(){
 	for(int i=0; i<number_of_actuators; i++)
 		message += std::to_string(actuator_voltages[i]) + ", ";
 	return message;
-}
-
-PYBIND11_MODULE(fakealpao, m) {
-	py::class_<FakeAlpao>(m, "FakeAlpao")
-		.def(py::init<std::string &>())
-		.def("Send", &FakeAlpao::Send)
-		.def("Reset", &FakeAlpao::Reset)
-		.def("GetVoltages", &FakeAlpao::GetVoltages);
 }
