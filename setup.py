@@ -1,5 +1,4 @@
 ﻿import os, sys
-
 from distutils.core import setup, Extension
 from distutils import sysconfig
 
